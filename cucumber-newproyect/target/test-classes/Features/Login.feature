@@ -12,5 +12,7 @@ Feature: Title of your feature
   Scenario: Resolución de preguntas seis hasta diez
   	Given que elijo la opcion "Precio + Envío: más bajo primero"
   	When selecciono los 5 primeros items para realizar un pedido
-  	And ordeno los items por nombre de forma ascendente 
+  	And ordeno los items por nombre de forma ascendente
+  	And ordeno los items por precio de forma descendente 
+  	Then se muestra mensaje de "finalizado ok"
   	 

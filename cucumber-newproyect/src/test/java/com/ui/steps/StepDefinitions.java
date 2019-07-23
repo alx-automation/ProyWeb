@@ -43,4 +43,14 @@ public class StepDefinitions {
 	public void ordeno_los_items_por_nombre_de_forma_ascendente() {
 	    pageImplementation.ordenarItemsPorNombre();
 	}
+	
+	@When("ordeno los items por precio de forma descendente")
+	public void ordeno_los_items_por_precio_de_forma_descendente() {
+	    pageImplementation.ordenarItemsPorPrecio();
+	}
+
+	@Then("se muestra mensaje de {string}")
+	public void se_muestra_mensaje_de(String mensaje) {
+	    pageImplementation.validarMensaje(mensaje);
+	}
 }
