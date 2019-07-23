@@ -1,0 +1,167 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Resolver preguntas de uno al cinco",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5176956000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "ingreso a la siguiente direccion web \"https://www.ebay.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.ebay.com/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "StepDefinitions.ingreso_a_la_siguiente_direccion_web(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8449920800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "realizo una busqueda por \"shoes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shoes\"",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.realizo_una_busqueda_por(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5774031500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "selecciono la talla \"10\" y la marca \"PUMA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"PUMA\"",
+                  "offset": 36
+                }
+              ],
+              "location": "StepDefinitions.selecciono_la_talla_y_la_marca(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 276499100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "observo el total de resultados",
+            "match": {
+              "location": "StepDefinitions.observo_el_total_de_resultados()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Resolución de preguntas seis hasta diez",
+        "description": "",
+        "id": "title-of-your-feature;resolución-de-preguntas-seis-hasta-diez",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8670784700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "que elijo la opcion \"Precio + Envío: más bajo primero\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Precio + Envío: más bajo primero\"",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefinitions.que_elijo_la_opcion(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 267827300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "selecciono los 5 primeros items para realizar un pedido",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefinitions.selecciono_los_primeros_items_para_realizar_un_pedido(Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 230900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "ordeno los items por nombre de forma ascendente",
+            "match": {
+              "location": "StepDefinitions.ordeno_los_items_por_nombre_de_forma_ascendente()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Prueba"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "  I want to use this template for my feature file",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "src\\test\\resources\\Features\\Login.feature",
+    "tags": [
+      {
+        "name": "@Prueba",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
