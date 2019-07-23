@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5176956000,
+              "duration": 4212274400,
               "status": "passed"
             },
             "line": 6,
@@ -29,7 +29,7 @@
           },
           {
             "result": {
-              "duration": 8449920800,
+              "duration": 8393681500,
               "status": "passed"
             },
             "line": 7,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 5774031500,
+              "duration": 6660509100,
               "status": "passed"
             },
             "line": 8,
@@ -69,7 +69,7 @@
           },
           {
             "result": {
-              "duration": 276499100,
+              "duration": 80577700,
               "status": "passed"
             },
             "line": 9,
@@ -91,7 +91,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8670784700,
+              "duration": 7318610000,
               "status": "passed"
             },
             "line": 13,
@@ -109,7 +109,7 @@
           },
           {
             "result": {
-              "duration": 267827300,
+              "duration": 806448500,
               "status": "passed"
             },
             "line": 14,
@@ -127,7 +127,7 @@
           },
           {
             "result": {
-              "duration": 230900,
+              "duration": 154200,
               "status": "passed"
             },
             "line": 15,
@@ -136,6 +136,36 @@
               "location": "StepDefinitions.ordeno_los_items_por_nombre_de_forma_ascendente()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 275800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "ordeno los items por precio de forma descendente",
+            "match": {
+              "location": "StepDefinitions.ordeno_los_items_por_precio_de_forma_descendente()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1239000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "se muestra mensaje de \"finalizado ok\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"finalizado ok\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.se_muestra_mensaje_de(String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
