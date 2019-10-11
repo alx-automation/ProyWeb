@@ -3,18 +3,19 @@
     "line": 2,
     "elements": [
       {
-        "line": 5,
-        "name": "Resolver preguntas de uno al cinco",
+        "line": 19,
+        "name": "Realizo una busqueda de zapatos en ebay de talla 10 y marca puma",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
+        "id": "compra-de-productos-en-ebay;realizo-una-busqueda-de-zapatos-en-ebay-de-talla-10-y-marca-puma",
+        "type": "scenario",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4212274400,
+              "duration": 2220541059,
               "status": "passed"
             },
-            "line": 6,
+            "line": 20,
             "name": "ingreso a la siguiente direccion web \"https://www.ebay.com/\"",
             "match": {
               "arguments": [
@@ -29,10 +30,10 @@
           },
           {
             "result": {
-              "duration": 8393681500,
+              "duration": 4735579329,
               "status": "passed"
             },
-            "line": 7,
+            "line": 21,
             "name": "realizo una busqueda por \"shoes\"",
             "match": {
               "arguments": [
@@ -47,10 +48,10 @@
           },
           {
             "result": {
-              "duration": 6660509100,
+              "duration": 2760613960,
               "status": "passed"
             },
-            "line": 8,
+            "line": 22,
             "name": "selecciono la talla \"10\" y la marca \"PUMA\"",
             "match": {
               "arguments": [
@@ -69,123 +70,35 @@
           },
           {
             "result": {
-              "duration": 80577700,
+              "duration": 840294797,
               "status": "passed"
             },
-            "line": 9,
-            "name": "observo el total de resultados",
+            "line": 23,
+            "name": "muestro el total de resultados",
             "match": {
               "location": "StepDefinitions.observo_el_total_de_resultados()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 12,
-        "name": "Resolución de preguntas seis hasta diez",
-        "description": "",
-        "id": "title-of-your-feature;resolución-de-preguntas-seis-hasta-diez",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 7318610000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "que elijo la opcion \"Precio + Envío: más bajo primero\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Precio + Envío: más bajo primero\"",
-                  "offset": 20
-                }
-              ],
-              "location": "StepDefinitions.que_elijo_la_opcion(String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 806448500,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "selecciono los 5 primeros items para realizar un pedido",
-            "match": {
-              "arguments": [
-                {
-                  "val": "5",
-                  "offset": 15
-                }
-              ],
-              "location": "StepDefinitions.selecciono_los_primeros_items_para_realizar_un_pedido(Integer)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 154200,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "ordeno los items por nombre de forma ascendente",
-            "match": {
-              "location": "StepDefinitions.ordeno_los_items_por_nombre_de_forma_ascendente()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 275800,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "ordeno los items por precio de forma descendente",
-            "match": {
-              "location": "StepDefinitions.ordeno_los_items_por_precio_de_forma_descendente()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1239000,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "se muestra mensaje de \"finalizado ok\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"finalizado ok\"",
-                  "offset": 22
-                }
-              ],
-              "location": "StepDefinitions.se_muestra_mensaje_de(String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Prueba"
+            "name": "@AutomationExam"
           },
           {
-            "name": "@tag1"
+            "name": "@Preguntas_1_5"
           }
         ]
       }
     ],
-    "name": "Title of your feature",
-    "description": "  I want to use this template for my feature file",
-    "id": "title-of-your-feature",
+    "name": "Compra de productos en eBay",
+    "description": "  1- Enter to Ebay\n  2- Search for shoes\n  3- Select brand PUMA\n  4- Select size 10\n  5- Print the number of results\n\n  6- Order by price ascendant\n  7- Assert the order taking the first 5 results\n  8- Take the first 5 products with their prices and print them in console.\n  9- Order and print the products by name (ascendant)\n  10- Order and print the products by price in descendant mode\n  11- Repository must be created in any git place (github, bitbucket, etc)\n  12- Code must run in any CI tool.\n  13- Report should be sent by mail.",
+    "id": "compra-de-productos-en-ebay",
     "keyword": "Feature",
-    "uri": "src\\test\\resources\\Features\\Login.feature",
+    "uri": "src/test/resources/Features/Login.feature",
     "tags": [
       {
-        "name": "@Prueba",
+        "name": "@AutomationExam",
         "type": "Tag",
         "location": {
           "line": 1,
