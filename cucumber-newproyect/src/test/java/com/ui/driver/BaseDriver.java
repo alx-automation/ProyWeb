@@ -1,6 +1,7 @@
 package com.ui.driver;
 
 import com.ui.dataProviders.ConfigFileReader;
+import com.ui.managers.FileReaderManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +12,7 @@ public class BaseDriver {
     ConfigFileReader configFileReader= new ConfigFileReader();
 
     public void inicializarDriver() {
-        System.setProperty(configFileReader.obtenerChromeDriver(), configFileReader.obtenerChromeDriverPath());
+        System.setProperty(FileReaderManager.getInstance().getConfigReader().getChromeDriver(), FileReaderManager.getInstance().getConfigReader().getChromeDriverPath());
         try {
             driver = new ChromeDriver();
         } catch (WebDriverException wde) {

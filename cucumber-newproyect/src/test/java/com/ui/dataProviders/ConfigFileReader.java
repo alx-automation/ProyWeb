@@ -28,13 +28,13 @@ public class ConfigFileReader {
         }
     }
 
-    public String obtenerChromeDriverPath(){
+    public String getChromeDriverPath(){
         String chromeDriverPath = properties.getProperty("chromeDriverPath");
         if(chromeDriverPath!= null) return chromeDriverPath;
         else throw new RuntimeException("chromeDriverPath not specified in the Configuration.properties file.");
     }
 
-    public String obtenerChromeDriver(){
+    public String getChromeDriver(){
         String chromeDriver = properties.getProperty("chromeDriver");
         if(chromeDriver!= null) return chromeDriver;
         else throw new RuntimeException("chromeDriver not specified in the Configuration.properties file.");
