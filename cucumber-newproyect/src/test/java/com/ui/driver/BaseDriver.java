@@ -1,6 +1,6 @@
 package com.ui.driver;
 
-import com.ui.managers.PageObjectManager;
+import com.ui.dataProviders.ConfigFileReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,9 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BaseDriver {
 
     protected static WebDriver driver;
+    ConfigFileReader configFileReader= new ConfigFileReader();
 
     public void inicializarDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/Driver/chromedriver");
+        System.setProperty(configFileReader.obtenerChromeDriver(), configFileReader.obtenerChromeDriverPath());
         try {
             driver = new ChromeDriver();
         } catch (WebDriverException wde) {
