@@ -1,4 +1,4 @@
-package com.ui.page;
+package com.ui.pageObjects;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,6 +9,7 @@ import com.ui.utilities.ControlUserInterface;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +18,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ui.driver.BaseDriver;
 
-public class PageImplementation extends BaseDriver {
+public class EbaySearchPage extends BaseDriver {
+
+    WebDriver driver;
+
+    public EbaySearchPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    private ArrayList<String> listaNombres = new ArrayList<String>();
+    private ArrayList<String> listaPrecios = new ArrayList<String>();
+
+    ControlUserInterface controlUI = new ControlUserInterface();
 
     @FindBy(xpath = "//*[@id=\'gh-ac\']")
     private WebElement campoBusqueda;
@@ -42,15 +55,6 @@ public class PageImplementation extends BaseDriver {
 //	private By btnCompletarCompra = By.xpath("//*[@id=\"sbin-gxo-btn\"]");
 
 //	private By btnVolver = By.xpath("//*[@id=\"smtBackToAnchorArrow\"]/span");
-
-    private ArrayList<String> listaNombres = new ArrayList<String>();
-    private ArrayList<String> listaPrecios = new ArrayList<String>();
-
-    ControlUserInterface controlUI = new ControlUserInterface();
-
-    public PageImplementation() {
-        PageFactory.initElements(driver, this);
-    }
 
     public void ingresarDireccionWeb(String url) {
         driver.manage().window().maximize();
