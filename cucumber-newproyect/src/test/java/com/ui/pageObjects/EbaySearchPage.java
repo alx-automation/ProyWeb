@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.concurrent.TimeUnit;
 
 import com.ui.utilities.ControlUserInterface;
+import org.apache.http.impl.conn.SystemDefaultRoutePlanner;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -36,11 +37,11 @@ public class EbaySearchPage extends BaseDriver {
     private WebElement campoBusqueda;
     @FindBy(xpath = "//*[@id=\'gh-btn\']")
     private WebElement botonBuscar;
-    @FindBy(xpath = "//*[@id=\'w4\']/descendant::div[@id=\'x-refine__group_1__0\']/descendant::span[text()='10']")
+    @FindBy(xpath = "//*[@id='w4']//div[@id='x-refine__group_1__3']//li[5]//span[text()='10']")
     private WebElement checkTalla;
-    @FindBy(xpath = "//*[@id='w4']/descendant::input[@id='w4-w3-0[0]']")
+    @FindBy(xpath = "//input[@id='w4-w2-0[0]']")
     private WebElement campoMarcasDisponibles;
-    @FindBy(xpath = "//*[@id='w4']/descendant::div[@id='x-refine__group_1__0']/descendant::span[text()=\'PUMA\']")
+    @FindBy(xpath = "//*[@id='w4']//div[@id='x-refine__group_1__0']//span[text()='PUMA']")
     private WebElement checkMarca;
 
 
@@ -70,12 +71,20 @@ public class EbaySearchPage extends BaseDriver {
     }
 
     public void elegirFlitrosBusqueda(String talla, String marca) {
-        controlUI.esperaObjeto(checkTalla);
-        checkTalla.click();
+        boolean encontrado;
         controlUI.esperaObjeto(campoMarcasDisponibles);
         campoMarcasDisponibles.sendKeys(marca);
         controlUI.esperaObjeto(checkMarca);
         checkMarca.click();
+        do{
+            encontrado = controlUI.esVisible(checkTalla);
+            if(encontrado){
+                checkTalla.click();
+                System.out.println("Elemento encontrado");
+            }else{
+                controlUI.scrollDown();
+            }
+        } while(!encontrado);
     }
 
     public void mostrarTotalResultadosBusqueda() {

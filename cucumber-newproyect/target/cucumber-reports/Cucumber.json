@@ -1,0 +1,132 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7452353298,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.iniciarDriver()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Realizo una busqueda de zapatos en ebay de talla 10 y marca puma",
+        "description": "",
+        "id": "compra-de-productos-en-ebay;realizo-una-busqueda-de-zapatos-en-ebay-de-talla-10-y-marca-puma",
+        "after": [
+          {
+            "result": {
+              "duration": 302051104,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.CerrarDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1676531951,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "ingreso a la siguiente direccion web \"https://www.ebay.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.ebay.com/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "EbaySearchSteps.ingreso_a_la_siguiente_direccion_web(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4587541177,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "realizo una busqueda por \"shoes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shoes\"",
+                  "offset": 25
+                }
+              ],
+              "location": "EbaySearchSteps.realizo_una_busqueda_por(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2328167531,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "selecciono la talla \"10\" y la marca \"PUMA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"PUMA\"",
+                  "offset": 36
+                }
+              ],
+              "location": "EbaySearchSteps.selecciono_la_talla_y_la_marca(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1159370969,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "muestro el total de resultados",
+            "match": {
+              "location": "EbaySearchSteps.observo_el_total_de_resultados()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AutomationExam"
+          },
+          {
+            "name": "@Preguntas_1_5"
+          }
+        ]
+      }
+    ],
+    "name": "Compra de productos en eBay",
+    "description": "  1- Enter to Ebay\n  2- Search for shoes\n  3- Select brand PUMA\n  4- Select size 10\n  5- Print the number of results\n\n  6- Order by price ascendant\n  7- Assert the order taking the first 5 results\n  8- Take the first 5 products with their prices and print them in console.\n  9- Order and print the products by name (ascendant)\n  10- Order and print the products by price in descendant mode\n  11- Repository must be created in any git place (github, bitbucket, etc)\n  12- Code must run in any CI tool.\n  13- Report should be sent by mail.",
+    "id": "compra-de-productos-en-ebay",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Features/Login.feature",
+    "tags": [
+      {
+        "name": "@AutomationExam",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
