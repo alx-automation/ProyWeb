@@ -9,36 +9,37 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ControlUserInterface extends BaseDriver {
 
-    public boolean esperaObjeto(WebElement Elemento) {
-        try{
-            WebDriverWait wait = new WebDriverWait(driver, 10);
-            wait.until(ExpectedConditions.elementToBeClickable(Elemento));
-            return true;
-        }
-        catch(Exception e){
-            return false;
-        }
+    public void esperaObjeto(WebElement elemento) {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOf(elemento));
     }
 
-    public static void esperaObjeto(By Elemento) {
-        WebDriverWait wait = new WebDriverWait(driver, 60);
-        wait.until(ExpectedConditions.elementToBeClickable(Elemento));
-    }
-
-    public void scrollDown(){
+    public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)", "");
     }
 
-    public boolean esVisible(WebElement Elemento) {
-        try{
-            WebDriverWait wait = new WebDriverWait(driver, 10);
-            wait.until(ExpectedConditions.visibilityOf(Elemento));
+    public boolean esVisible(WebElement elemento) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 20);
+            wait.until(ExpectedConditions.visibilityOf(elemento));
             return true;
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             return false;
         }
+    }
+
+    public void estaPresente(WebElement elemento) {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.elementToBeClickable(elemento));
+
+    }
+
+    public static By updateXpath(By by, String addValue) {
+        String auxXpath = by.toString();
+        auxXpath = auxXpath.substring(auxXpath.indexOf("//"));
+        auxXpath = String.format(auxXpath, addValue);
+        return By.xpath(auxXpath);
     }
 
 }

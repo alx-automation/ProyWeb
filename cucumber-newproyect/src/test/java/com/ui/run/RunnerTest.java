@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src/test/resources/Features/Login.feature"},
         glue = {"com.ui.steps"},
-        tags = {"not @tag", "@Preguntas_1_5"},
+        tags = {"not @tag", "@wip"},
         plugin = {"json:target/cucumber-reports/Cucumber.json"},
         monochrome = true)
 public class RunnerTest {

@@ -15,17 +15,14 @@ Feature: Compra de productos en eBay
   12- Code must run in any CI tool.
   13- Report should be sent by mail.
 
-  @Preguntas_1_5
-  Scenario: Realizo una busqueda de zapatos en ebay de talla 10 y marca puma
+  @wip
+  Scenario: Realizo una busqueda de zapatos de talla 10 y marca PUMA en ebay
     Given ingreso a la siguiente direccion web "https://www.ebay.com/"
     And realizo una busqueda por "shoes"
-    When selecciono la talla "10" y la marca "PUMA"
-    Then muestro el total de resultados
-
-  @tag
-  Scenario: Resolución de preguntas seis hasta diez
-    Given que elijo la opcion "Precio + Envío: más bajo primero"
+    And selecciono la talla "10" y la marca "PUMA"
+    And muestro el total de resultados
+    And ordeno el resultado de or precio ascendente
     When selecciono los 5 primeros items para realizar un pedido
-    And ordeno los items por nombre de forma ascendente
-    And ordeno los items por precio de forma descendente
-    Then se muestra mensaje de "finalizado ok"
+    #And ordeno los items por nombre de forma ascendente
+    #And ordeno los items por precio de forma descendente
+    #Then se muestra mensaje de "finalizado ok"

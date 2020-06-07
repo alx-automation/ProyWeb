@@ -1,5 +1,8 @@
 package com.ui.dataProviders;
 
+import com.ui.enums.DriverType;
+import com.ui.enums.EnvironmentType;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -28,16 +31,43 @@ public class ConfigFileReader {
         }
     }
 
-    public String getChromeDriverPath(){
-        String chromeDriverPath = properties.getProperty("chromeDriverPath");
+    public String getDriverPath(){
+        String chromeDriverPath = properties.getProperty("driverPath");
         if(chromeDriverPath!= null) return chromeDriverPath;
         else throw new RuntimeException("chromeDriverPath not specified in the Configuration.properties file.");
     }
 
-    public String getChromeDriver(){
-        String chromeDriver = properties.getProperty("chromeDriver");
+    public String getDriver(){
+        String chromeDriver = properties.getProperty("driver");
         if(chromeDriver!= null) return chromeDriver;
         else throw new RuntimeException("chromeDriver not specified in the Configuration.properties file.");
+    }
+
+    public DriverType getBrowser() {
+        String browserName = properties.getProperty("browser");
+        if(browserName == null || browserName.equalsIgnoreCase("chrome")) return DriverType.CHROME;
+        else if(browserName.equalsIgnoreCase("firefox")) return DriverType.FIREFOX;
+        else if(browserName.equalsIgnoreCase("iexplorer")) return DriverType.INTERNETEXPLORER;
+        else throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
+    }
+
+    public EnvironmentType getEnvironment() {
+        String environmentName = properties.getProperty("environment");
+        if(environmentName == null || environmentName.equalsIgnoreCase("local")) return EnvironmentType.LOCAL;
+        else if(environmentName.equalsIgnoreCase("remote")) return EnvironmentType.REMOTE;
+        else throw new RuntimeException("Environment Type Key value in Configuration.properties is not matched : " + environmentName);
+    }
+
+    public Boolean getBrowserWindowSize() {
+        String windowSize = properties.getProperty("windowMaximize");
+        if(windowSize != null) return Boolean.valueOf(windowSize);
+        return true;
+    }
+
+    public long getImplicitlyWait() {
+        String implicitlyWait = properties.getProperty("implicitlyWait");
+        if(implicitlyWait != null) return Long.parseLong(implicitlyWait);
+        else throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
     }
 }
 

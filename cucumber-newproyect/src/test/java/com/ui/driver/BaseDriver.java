@@ -1,31 +1,30 @@
 package com.ui.driver;
 
-import com.ui.dataProviders.ConfigFileReader;
-import com.ui.managers.FileReaderManager;
+import com.ui.managers.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseDriver {
 
     protected static WebDriver driver;
-    ConfigFileReader configFileReader= new ConfigFileReader();
+    WebDriverManager webDriverManager;
 
-    public void inicializarDriver() {
-        System.setProperty(FileReaderManager.getInstance().getConfigReader().getChromeDriver(), FileReaderManager.getInstance().getConfigReader().getChromeDriverPath());
+    public void iniciarDriver() {
+        webDriverManager = new WebDriverManager();
         try {
-            driver = new ChromeDriver();
+            driver = webDriverManager.getDriver();
         } catch (WebDriverException wde) {
             System.out.println(wde.getMessage());
         }
     }
 
-    public void endDriver() {
-        if (driver != null) {
-            driver.close();
-            driver.quit();
-        }
+    public WebDriver obtenerDriver() {
+        return driver;
     }
 
-
+    public void finalizarDriver() {
+        if (driver != null) {
+            webDriverManager.closeDriver();
+        }
+    }
 }

@@ -4,13 +4,14 @@ import com.ui.driver.BaseDriver;
 import com.ui.managers.PageObjectManager;
 import com.ui.pageObjects.EbaySearchPage;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class EbaySearchSteps extends BaseDriver {
-
-    PageObjectManager pageObjectManager = new PageObjectManager(driver);
+public class EbaySearchSteps {
+    BaseDriver bd = new BaseDriver();
+    PageObjectManager pageObjectManager = new PageObjectManager(bd.obtenerDriver());
     EbaySearchPage ebaySearchPage = pageObjectManager.obtenerEbaySearchPage();
 
     @Given("ingreso a la siguiente direccion web {string}")
@@ -33,13 +34,8 @@ public class EbaySearchSteps extends BaseDriver {
         ebaySearchPage.mostrarTotalResultadosBusqueda();
     }
 
-    @Given("que elijo la opcion {string}")
-    public void que_elijo_la_opcion(String string) throws InterruptedException {
-        ebaySearchPage.seleccionarTipoOrdenamiento(string);
-    }
-
     @When("selecciono los {int} primeros items para realizar un pedido")
-    public void selecciono_los_primeros_items_para_realizar_un_pedido(Integer cantidadItems) throws InterruptedException {
+    public void selecciono_los_primeros_items_para_realizar_un_pedido(int cantidadItems) throws InterruptedException {
         ebaySearchPage.seleccionarItems(cantidadItems);
     }
 
@@ -56,5 +52,10 @@ public class EbaySearchSteps extends BaseDriver {
     @Then("se muestra mensaje de {string}")
     public void se_muestra_mensaje_de(String mensaje) {
         ebaySearchPage.validarMensaje(mensaje);
+    }
+
+    @And("ordeno el resultado de or precio ascendente")
+    public void ordenoElResultadoDeOrPrecioAscendente() throws InterruptedException {
+        ebaySearchPage.seleccionarTipoOrdenamiento();
     }
 }

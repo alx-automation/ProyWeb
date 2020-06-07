@@ -10,12 +10,12 @@ public class Hooks {
 
     @Before
     public static void iniciarDriver() throws Exception {
-        bd.inicializarDriver();
+        bd.iniciarDriver();
         Thread.sleep(5000);
     }
 
     @After
     public static void CerrarDriver() {
-        bd.endDriver();
+        bd.finalizarDriver();
     }
 }
