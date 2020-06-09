@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 7453471145,
+              "duration": 6548201382,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 424952737,
+              "duration": 221230824,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1773080464,
+              "duration": 2721559904,
               "status": "passed"
             },
             "line": 20,
@@ -52,7 +52,7 @@
           },
           {
             "result": {
-              "duration": 3899328976,
+              "duration": 3324621620,
               "status": "passed"
             },
             "line": 21,
@@ -70,9 +70,8 @@
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator \u0027By.id: w4-w12-0[0]\u0027 (tried for 20 second(s) with 500 milliseconds interval)\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)\n\tat com.ui.utilities.ControlUserInterface.esperaObjeto(ControlUserInterface.java:14)\n\tat com.ui.pageObjects.EbaySearchPage.elegirFlitrosBusqueda(EbaySearchPage.java:80)\n\tat com.ui.steps.EbaySearchSteps.selecciono_la_talla_y_la_marca(EbaySearchSteps.java:29)\n\tat ✽.selecciono la talla \"10\" y la marca \"PUMA\"(src/test/resources/Features/Login.feature:22)\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#w4\\-w12\\-0\\[0\\]\"}\n  (Session info: chrome\u003d83.0.4103.97)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027MacBook-Pro-de-alex.local\u0027, ip: \u0027fe80:0:0:0:14b5:6eea:403d:dd17%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.5\u0027, java.version: \u002711.0.7\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/mt/jc5d_xd11vq...}, goog:chromeOptions: {debuggerAddress: localhost:62659}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: c147989ffad80f985015cd06e4ac83ea\n*** Element info: {Using\u003did, value\u003dw4-w12-0[0]}\n\tat jdk.internal.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy19.isDisplayed(Unknown Source)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)\n\tat com.ui.utilities.ControlUserInterface.esperaObjeto(ControlUserInterface.java:14)\n\tat com.ui.pageObjects.EbaySearchPage.elegirFlitrosBusqueda(EbaySearchPage.java:80)\n\tat com.ui.steps.EbaySearchSteps.selecciono_la_talla_y_la_marca(EbaySearchSteps.java:29)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:44)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:67)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:22)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:72)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)\n",
-              "duration": 20388480800,
-              "status": "failed"
+              "duration": 2587197550,
+              "status": "passed"
             },
             "line": 22,
             "name": "selecciono la talla \"10\" y la marca \"PUMA\"",
@@ -93,8 +92,8 @@
           },
           {
             "result": {
-              "duration": 9181,
-              "status": "skipped"
+              "duration": 1106370709,
+              "status": "passed"
             },
             "line": 23,
             "name": "muestro el total de resultados",
@@ -105,11 +104,11 @@
           },
           {
             "result": {
-              "duration": 5466,
-              "status": "skipped"
+              "duration": 1427765274,
+              "status": "passed"
             },
             "line": 24,
-            "name": "ordeno el resultado de or precio ascendente",
+            "name": "ordeno el resultado por precio ascendente",
             "match": {
               "location": "EbaySearchSteps.ordenoElResultadoDeOrPrecioAscendente()"
             },
@@ -117,21 +116,63 @@
           },
           {
             "result": {
-              "duration": 4534,
-              "status": "skipped"
+              "duration": 270404356,
+              "status": "passed"
             },
             "line": 25,
-            "name": "selecciono los 5 primeros items para realizar un pedido",
+            "name": "selecciono e imprimo los 5 primeros items",
             "match": {
               "arguments": [
                 {
                   "val": "5",
-                  "offset": 15
+                  "offset": 25
                 }
               ],
               "location": "EbaySearchSteps.selecciono_los_primeros_items_para_realizar_un_pedido(int)"
             },
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 161869,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "ordeno los items por nombre de forma ascendente",
+            "match": {
+              "location": "EbaySearchSteps.ordeno_los_items_por_nombre_de_forma_ascendente()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 370960,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "ordeno los items por precio de forma descendente",
+            "match": {
+              "location": "EbaySearchSteps.ordeno_los_items_por_precio_de_forma_descendente()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1347813,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "se muestra mensaje de \"finalizado ok\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"finalizado ok\"",
+                  "offset": 22
+                }
+              ],
+              "location": "EbaySearchSteps.se_muestra_mensaje_de(String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
@@ -145,7 +186,7 @@
       }
     ],
     "name": "Compra de productos en eBay",
-    "description": "  1- Enter to Ebay\n  2- Search for shoes\n  3- Select brand PUMA\n  4- Select size 10\n  5- Print the number of results\n\n  6- Order by price ascendant\n  7- Assert the order taking the first 5 results\n  8- Take the first 5 products with their prices and print them in console.\n  9- Order and print the products by name (ascendant)\n  10- Order and print the products by price in descendant mode\n  11- Repository must be created in any git place (github, bitbucket, etc)\n  12- Code must run in any CI tool.\n  13- Report should be sent by mail.",
+    "description": "  1- Enter to Ebay\n  2- Search for shoes\n  3- Select brand PUMA\n  4- Select size 10\n  5- Print the number of results\n  6- Order by price ascendant\n  7- Assert the order taking the first 5 results\n  8- Take the first 5 products with their prices and print them in console.\n  9- Order and print the products by name (ascendant)\n  10- Order and print the products by price in descendant mode\n\n  11- Repository must be created in any git place (github, bitbucket, etc)\n  12- Code must run in any CI tool.\n  13- Report should be sent by mail.",
     "id": "compra-de-productos-en-ebay",
     "keyword": "Feature",
     "uri": "src/test/resources/Features/Login.feature",

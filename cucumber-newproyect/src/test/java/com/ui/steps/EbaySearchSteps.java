@@ -34,8 +34,8 @@ public class EbaySearchSteps {
         ebaySearchPage.mostrarTotalResultadosBusqueda();
     }
 
-    @When("selecciono los {int} primeros items para realizar un pedido")
-    public void selecciono_los_primeros_items_para_realizar_un_pedido(int cantidadItems) throws InterruptedException {
+    @When("selecciono e imprimo los {int} primeros items")
+    public void selecciono_los_primeros_items_para_realizar_un_pedido(int cantidadItems) {
         ebaySearchPage.seleccionarItems(cantidadItems);
     }
 
@@ -54,8 +54,8 @@ public class EbaySearchSteps {
         ebaySearchPage.validarMensaje(mensaje);
     }
 
-    @And("ordeno el resultado de or precio ascendente")
-    public void ordenoElResultadoDeOrPrecioAscendente() throws InterruptedException {
+    @And("ordeno el resultado por precio ascendente")
+    public void ordenoElResultadoDeOrPrecioAscendente() {
         ebaySearchPage.seleccionarTipoOrdenamiento();
     }
 }
