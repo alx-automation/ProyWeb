@@ -26,3 +26,5 @@ Feature: Compra de productos en eBay
     And ordeno los items por nombre de forma ascendente
     And ordeno los items por precio de forma descendente
     Then se muestra mensaje de "finalizado ok"
+
+

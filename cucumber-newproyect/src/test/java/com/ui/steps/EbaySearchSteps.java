@@ -10,6 +10,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class EbaySearchSteps {
+
     BaseDriver bd = new BaseDriver();
     PageObjectManager pageObjectManager = new PageObjectManager(bd.obtenerDriver());
     EbaySearchPage ebaySearchPage = pageObjectManager.obtenerEbaySearchPage();

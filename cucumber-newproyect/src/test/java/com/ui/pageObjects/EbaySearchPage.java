@@ -52,6 +52,7 @@ public class EbaySearchPage extends BaseDriver {
     private List<WebElement> nombreProducto;
     @FindBy(xpath = "//div[@class='s-item__info clearfix']//span[@class='s-item__price']")
     private List<WebElement> precioProducto;
+    
 
 //	private By campoCantidad = By.xpath("//*[@id=\'qtyTextBox\']");
 //	private By btnComprar = By.xpath("//*[@id=\"binBtn_btn\"]");
